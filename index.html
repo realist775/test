@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <title>(주)포레 — 자재 단가표 | FORE TIMBER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ═══════════════════════════ LOADER ═══════════════════════════ -->
+<div class="loader" id="loader">
+  <div class="loader-ring">
+    <svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.08)" stroke-width="1" fill="none"/>
+      <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.7)" stroke-width="1" fill="none"
+        stroke-dasharray="276" stroke-dashoffset="276" class="loader-arc"/>
+    </svg>
+  </div>
+  <div class="loader-logo">(주)<span>포레</span></div>
+  <div class="loader-sub">FORE TIMBER</div>
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+</div>
+
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a class="navbar-brand" href="#">
+      <div class="navbar-mark">포</div>
+      <div>
+        <span class="nb-ko">(주)포레</span>
+        <span class="nb-en">FORE TIMBER</span>
+      </div>
+    </a>
+    <div class="navbar-cta">
+      <a href="sms:01045840219" class="btn-sms">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M2 2h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5l-3 2V3a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        문자
+      </a>
+      <a href="tel:18006404" class="btn-call">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M2 2.5C2 2.224 2.224 2 2.5 2h2.382a.5.5 0 0 1 .474.342l.96 2.879a.5.5 0 0 1-.152.545l-1.29 1.075c.767 1.567 2.035 2.836 3.602 3.602l1.075-1.29a.5.5 0 0 1 .545-.152l2.879.96A.5.5 0 0 1 14 10.118V12.5a.5.5 0 0 1-.5.5C6.596 13 2 8.404 2 2.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        전화
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow" data-anim="fadeUp" data-delay="100">
+        <span class="eyebrow-line"></span>경남 김해 기반 자재 전문 유통
+      </div>
+      <h1 class="hero-title">
+        <span class="ht-line" data-anim="fadeUp" data-delay="200">자재의 <em>기준</em>을</span>
+        <span class="ht-line" data-anim="fadeUp" data-delay="300">세웁니다</span>
+      </h1>
+      <p class="hero-desc" data-anim="fadeUp" data-delay="380">
+        200여 종의 목재, 합판, 인테리어 자재를<br>합리적인 단가와 신속한 공급으로.
+      </p>
+      <div class="hero-actions" data-anim="fadeUp" data-delay="460">
+        <a href="#price" class="hero-btn-primary">단가표 조회 →</a>
+        <a href="#contact" class="hero-btn-ghost">견적 문의</a>
+      </div>
+      <div class="hero-pills" data-anim="fadeUp" data-delay="520">
+        <div class="hero-pill"><span class="pill-n">420+</span><span class="pill-l">전체 품목</span></div>
+        <div class="hero-pill"><span class="pill-n">즉시</span><span class="pill-l">공급 가능</span></div>
+        <div class="hero-pill"><span class="pill-n">B2B</span><span class="pill-l">파트너 혜택</span></div>
+      </div>
+
+      <!-- 모바일 전용 연락처 스트립 -->
+      <div class="hero-contact-strip" data-anim="fadeUp" data-delay="600">
+        <a href="tel:18006404" class="hcs-call">
+          <span class="hcs-icon">📞</span>
+          <div class="hcs-body">
+            <span class="hcs-label">대표 전화</span>
+            <span class="hcs-val">1800-6404</span>
+          </div>
+          <span class="hcs-arrow">→</span>
+        </a>
+        <a href="tel:01045840219" class="hcs-sms">
+          <span class="hcs-icon">📱</span>
+          <div class="hcs-body">
+            <span class="hcs-label">빠른 상담 전화</span>
+            <span class="hcs-val">010-4584-0219</span>
+          </div>
+          <span class="hcs-arrow">→</span>
+        </a>
+        <a href="sms:01045840219" class="hcs-sms" style="background:rgba(26,111,181,0.22);border-color:rgba(26,111,181,0.28)">
+          <span class="hcs-icon">💬</span>
+          <div class="hcs-body">
+            <span class="hcs-label">문자 상담 (빠른 답변)</span>
+            <span class="hcs-val">010-4584-0219</span>
+          </div>
+          <span class="hcs-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ STATS ═══════════════════════════ -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat"><span class="stat-n">420+</span><span class="stat-l">전체 품목</span></div>
+    <div class="stat-sep"></div>
+    <div class="stat"><span class="stat-n">즉시</span><span class="stat-l">공급 가능</span></div>
+    <div class="stat-sep"></div>
+    <div class="stat"><span class="stat-n">경남</span><span class="stat-l">김해 거점</span></div>
+    <div class="stat-sep"></div>
+    <div class="stat"><span class="stat-n" id="statDate">—</span><span class="stat-l">최종 업데이트</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ PRICE SECTION ═══════════════════════════ -->
+<section class="price-section" id="price">
+
+  <div class="price-head">
+    <div class="price-head-left">
+      <div class="section-eyebrow"><span class="eyebrow-dot"></span>실시간 단가 조회</div>
+      <h2 class="section-title">자재 단가표</h2>
+      <p class="section-desc">모든 단가는 <strong>부가세 별도</strong>이며, 시장 상황에 따라 변동될 수 있습니다.</p>
+    </div>
+    <div class="price-head-right">
+      <button class="btn-outline" id="btnPdf">
+        <svg viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>PDF
+      </button>
+      <button class="btn-outline" id="btnExcel">
+        <svg viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Excel
+      </button>
+      <a href="#contact" class="btn-primary-sm">견적 문의</a>
+    </div>
+  </div>
+
+  <!-- TOOLBAR -->
+  <div class="toolbar-wrap">
+    <div class="toolbar-r1">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none">
+          <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M13 13l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <input id="searchInput" class="search-input" type="search" placeholder="품목명, 규격으로 검색..." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"/>
+        <button id="clearBtn" class="search-clear" aria-label="지우기">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="toolbar-right">
+        <span class="result-count" id="resultCount"></span>
+        <select class="sort-select" id="sortSelect">
+          <option value="">정렬</option>
+          <option value="">기본순</option>
+          <option value="pa">낮은순</option>
+          <option value="pd">높은순</option>
+          <option value="na">이름순</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 카테고리 탭 -->
+    <div class="cat-outer">
+      <div class="cat-inner" id="catInner">
+        <button class="cat-btn active" data-c="">전체</button>
+        <button class="cat-btn" data-c="B급">B급</button>
+        <button class="cat-btn" data-c="방부데크재">방부데크</button>
+        <button class="cat-btn" data-c="방부목 각재">방부각재</button>
+        <button class="cat-btn" data-c="기동재">기동재</button>
+        <button class="cat-btn" data-c="원주목">원주목</button>
+        <button class="cat-btn" data-c="천연데크">천연데크</button>
+        <button class="cat-btn" data-c="구조재">구조재</button>
+        <button class="cat-btn" data-c="다루끼">다루끼</button>
+        <button class="cat-btn" data-c="토목 각재">토목각재</button>
+        <button class="cat-btn" data-c="라티스">라티스</button>
+        <button class="cat-btn" data-c="오비스기">오비스기</button>
+        <button class="cat-btn" data-c="히노끼">히노끼</button>
+        <button class="cat-btn" data-c="합판">합판</button>
+        <button class="cat-btn" data-c="자작합판">자작합판</button>
+        <button class="cat-btn" data-c="미송">미송</button>
+        <button class="cat-btn" data-c="오쿠메">오쿠메</button>
+        <button class="cat-btn" data-c="라왕">라왕</button>
+        <button class="cat-btn" data-c="방수합판">방수합판</button>
+        <button class="cat-btn" data-c="MDF">MDF</button>
+        <button class="cat-btn" data-c="내장재 (집성)">집성재</button>
+        <button class="cat-btn" data-c="합성데크">합성데크</button>
+        <button class="cat-btn" data-c="반재단 합판">반재단</button>
+        <button class="cat-btn" data-c="아이소핑크">아이소핑크</button>
+        <button class="cat-btn" data-c="계단판">계단판</button>
+        <button class="cat-btn" data-c="루바">루바</button>
+        <button class="cat-btn" data-c="사이딩">사이딩</button>
+        <button class="cat-btn" data-c="문살">문살</button>
+        <button class="cat-btn" data-c="석고">석고</button>
+        <button class="cat-btn" data-c="스테인">스테인</button>
+        <button class="cat-btn" data-c="목재용 피스">목재피스</button>
+        <button class="cat-btn" data-c="철판용 피스">철판피스</button>
+        <button class="cat-btn" data-c="타카핀">타카핀</button>
+        <button class="cat-btn" data-c="철물">철물</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD TABLE -->
+  <div class="table-container">
+    <div class="table-wrap">
+      <table class="price-table" id="priceTable">
+        <thead>
+          <tr>
+            <th>카테고리</th><th>제품명</th><th>규격</th>
+            <th class="tc">단위</th><th class="tc">단가</th><th class="tc">재고</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+      <div class="empty-state" id="emptyState" style="display:none">
+        <div class="es-icon">🔍</div>
+        <div class="es-title">검색 결과가 없습니다</div>
+        <div class="es-desc">다른 키워드나 카테고리로 검색해보세요</div>
+        <button class="es-reset" id="resetBtn">전체 초기화</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <div class="section-eyebrow"><span class="eyebrow-dot"></span>견적 및 구매 문의</div>
+      <h2 class="contact-title">필요한 자재,<br>지금 바로 문의하세요</h2>
+      <p class="contact-desc">대량 구매, 정기 납품, 규격 문의 등<br>모든 상담을 빠르게 도와드립니다.</p>
+      <div class="contact-cards">
+        <a href="tel:18006404" class="contact-card">
+          <span class="cc-icon">📞</span>
+          <div class="cc-body"><div class="cc-label">대표 전화</div><div class="cc-val">1800-6404</div></div>
+          <span class="cc-arrow">→</span>
+        </a>
+        <a href="sms:01045840219" class="contact-card cc-sms">
+          <span class="cc-icon">💬</span>
+          <div class="cc-body"><div class="cc-label">문자 보내기 (빠른 상담)</div><div class="cc-val">010-4584-0219</div></div>
+          <span class="cc-arrow">→</span>
+        </a>
+        <a href="tel:01045840219" class="contact-card cc-accent">
+          <span class="cc-icon">📱</span>
+          <div class="cc-body"><div class="cc-label">빠른 상담 전화</div><div class="cc-val">010-4584-0219</div></div>
+          <span class="cc-arrow">→</span>
+        </a>
+        <div class="contact-card cc-plain">
+          <span class="cc-icon">📍</span>
+          <div class="cc-body"><div class="cc-label">주소</div><div class="cc-val">경남 김해시 흥동 39-5</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 견적 폼 -->
+    <div class="contact-right">
+      <div class="contact-form">
+        <div class="form-title">온라인 견적 문의</div>
+        <div class="form-sub">작성 후 제출하면 담당자에게 전달됩니다.<br><strong>문자(SMS)로도 자동 알림</strong>이 발송됩니다.</div>
+        <div class="form-field">
+          <label>회사명 / 성함 <span class="req">*</span></label>
+          <input id="fName" type="text" placeholder="예) 홍길동 / 포레건설" inputmode="text"/>
+        </div>
+        <div class="form-field">
+          <label>연락처 <span class="req">*</span></label>
+          <input id="fPhone" type="tel" placeholder="010-0000-0000" inputmode="tel"/>
+        </div>
+        <div class="form-field">
+          <label>이메일</label>
+          <input id="fEmail" type="email" placeholder="답변받을 이메일 (선택)" inputmode="email"/>
+        </div>
+        <div class="form-field">
+          <label>필요 자재 및 수량 <span class="req">*</span></label>
+          <textarea id="fMsg" placeholder="필요하신 자재와 수량을 자유롭게 적어주세요."></textarea>
+        </div>
+        <div class="form-status" id="formStatus" style="display:none"></div>
+        <button class="form-submit" id="formSubmit">견적 보내기 →</button>
+        <a href="sms:01045840219" class="form-sms">💬 문자로 바로 보내기 →</a>
+        <p class="form-note">영업일 기준 24시간 이내 답변 · 평일 09:00 — 18:00</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><div class="fl-mark">포</div><span>(주)포레</span></div>
+        <p class="footer-desc">목재·합판·자재 전문 유통기업.<br>품질 좋은 자재를 합리적인 가격으로.<br><small>FORE TIMBER Co., Ltd.</small></p>
+        <div class="footer-badges">
+          <span>목재 전문</span><span>합판 유통</span><span>자재 파트너</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="fc-title">제품</div>
+        <a href="#price">방부데크재 / 각재</a>
+        <a href="#price">합판 · 자작합판 · MDF</a>
+        <a href="#price">히노끼 · 오비스기</a>
+      </div>
+      <div class="footer-col">
+        <div class="fc-title">서비스</div>
+        <a href="#price">실시간 단가표 조회</a>
+        <a href="#contact">온라인 견적 문의</a>
+        <a href="sms:01045840219">문자 상담</a>
+      </div>
+      <div class="footer-col">
+        <div class="fc-title">연락처</div>
+        <div class="fc-row"><span class="fc-lbl">상호</span><span>(주)포레</span></div>
+        <div class="fc-row"><span class="fc-lbl">주소</span><span>경남 김해시 흥동 39-5</span></div>
+        <div class="fc-row"><span class="fc-lbl">대표</span><a href="tel:18006404">1800-6404</a></div>
+        <div class="fc-row"><span class="fc-lbl">상담</span><a href="tel:01045840219" class="fc-accent">010-4584-0219</a></div>
+        <div class="fc-row"><span class="fc-lbl">이메일</span><a href="mailto:foretimber@naver.com">foretimber@naver.com</a></div>
+        <div class="fc-row"><span class="fc-lbl">운영</span><span>평일 09:00 — 18:00</span></div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>© 2025 (주)포레 FORE TIMBER. All rights reserved. 모든 단가는 부가세 별도.</p>
+      <div><a href="#">이용약관</a><a href="#">개인정보처리방침</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════ FLOATING ACTION BAR ═══════════════════════════ -->
+<div class="fab-wrap">
+  <a href="tel:18006404" class="fab-call">
+    <svg viewBox="0 0 16 16" fill="none"><path d="M2 2.5C2 2.224 2.224 2 2.5 2h2.382a.5.5 0 0 1 .474.342l.96 2.879a.5.5 0 0 1-.152.545l-1.29 1.075c.767 1.567 2.035 2.836 3.602 3.602l1.075-1.29a.5.5 0 0 1 .545-.152l2.879.96A.5.5 0 0 1 14 10.118V12.5a.5.5 0 0 1-.5.5C6.596 13 2 8.404 2 2.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    전화
+  </a>
+  <a href="sms:01045840219" class="fab-sms">
+    <svg viewBox="0 0 16 16" fill="none"><path d="M2 2h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5l-3 2V3a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    문자상담
+  </a>
+  <a href="#contact" class="fab-estimate">견적 보내기</a>
+</div>
+
+<!-- ═══════════════════════════ PHOTO MODAL ═══════════════════════════ -->
+<div class="photo-modal" id="photoModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-head">
+      <span class="modal-title" id="modalTitle">
+        <svg viewBox="0 0 16 16" fill="none" width="15" height="15" style="flex-shrink:0;color:var(--moss)">
+          <rect x="1" y="2.5" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="8" cy="8" r="2.2" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M5.5 2.5l1-2h3l1 2" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <span>제품 사진</span>
+      </span>
+      <button class="modal-close" onclick="closeModal()" aria-label="닫기">
+        <svg viewBox="0 0 20 20" fill="none"><path d="M5 5l10 10M15 5l-10 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <div class="modal-ph">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="32" rx="4" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="20" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 32l10-8 8 6 6-5 16 11" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <p>이미지를 준비 중입니다<br><strong>문의: 1800-6404</strong></p>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <span class="modal-foot-info">© (주)포레 FORE TIMBER</span>
+      <div class="modal-foot-btns">
+        <button class="modal-close-btn" onclick="closeModal()">닫기</button>
+        <a href="#contact" class="modal-cta" onclick="closeModal()">견적 문의</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
